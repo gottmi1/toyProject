@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style> 
+    *{
+      padding: 0; margin: 0; 
+    }
+
+    .po-ab{position: absolute;}
+    .po-re{position: relative;}
+
+    .back{
+      overflow: hidden;
+    }
+
+    #slide{width: 100vw;height: 100vh; float: left; transition: 200ms; opacity: 30%;}
+    #slide:nth-child(1) {background-color: salmon; background: url(./img/satin1.jpg) no-repeat center center; background-size: cover;}
+    #slide:nth-child(2) {background-color: silver; background: url(./img/h24.jpg) no-repeat center center; background-size: cover;}
+    #slide:nth-child(3) {background-color: slateblue; background: url(./img/black-orchid.jpg) no-repeat center center; background-size: cover;}
+    #slide:nth-child(4) {background-color: slateblue; background: url(./img/visuel-ombre-horizontal-rvb-72dpi.jpg) no-repeat center center; background-size: cover;}
+    #slide:nth-child(5) {background-color: slateblue; background: url(./img/bldecha.jpg) no-repeat center center; background-size: cover;}
+
+    #satin{
+      position: absolute;
+      top: 1600px;
+      transition: 1000ms;
+      opacity: 0;
+      background-attachment: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+    }
+
+    #top{
+      width: 500vw;
+      height: 100vh;
+      background-color: black;
+    }
+
+    #section1{
+      width: 100vw;
+      height: 100vh;
+      background: #111;
+      position: relative;
+    }
+
+    #section1 h1{
+      font-size: 4em;
+      color: rgb(228, 219, 168);
+      text-shadow: white 3px 3px 3px;
+      position: absolute;
+      left: 1%;
+      top: 0px;
+      z-index: 9;
+      opacity: 0;
+      transition: 400ms;
+    }
+
+    #section1 #kur1{
+      height: 90vh;
+      width: auto;
+      right: 10vw;
+      top: 50px;
+      opacity: 0;
+      transition: 2000ms;
+    }
+
+    #section1 #kur2{
+      height: 70vh;
+      width: auto;
+      left: 5vw;
+      top: 200px;
+      opacity: 0;
+      transition: 1000ms;
+    }
+
+    #section1 img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #section2 {
+      width: 100vw;
+      height: 120vh;
+      background-color: #ccc;
+      position: relative;
+      padding-top: 20vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #section2 h1{
+      font-size: 7em;
+      font-weight: 300;
+      top: -30%;
+      transform: scale(0);
+      transition: 600ms;
+      z-index: 2;
+    }
+
+    #section2 p{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #section2 div{
+      width: 27%;
+      height: 60%;
+      background-color: blueviolet;
+      transition: 1000ms;
+      opacity: 0;
+    }
+
+    #section3 {
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      background: url(./img/diplogo.jpg) no-repeat center center; background-size: cover;
+    }
+
+    #section3 div:nth-child(1) {
+      width: 30vw;
+      height: 40vh;
+      background-color: chartreuse;
+      opacity: .7;
+      top: 50vh;
+      left: 10vw;
+    }
+    #section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: 5vw; top: 20vh; opacity: .7;}
+    #section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: 20vw; opacity: .7;}
+
+  </style>
+</head>
+<body>
+  
+  <div class="back" style="width: 100vw; height: 10000px; background: #eee">
+
+    
+
+    <div id="top">
+      <div id="slide"></div>
+      <div id="slide"></div>
+      <div id="slide"></div>
+      <div id="slide"></div>
+      <div id="slide"></div>
+    </div>
+
+    <section id="section1">
+      <h1>MAISON FRANCIS <br> KURKDJIAN <br> PARIS</h1>
+      <div id="kur1" class="po-ab"><img src="./img/1.jpg" alt=""></div>
+      <div id="kur2" class="po-ab"><img src="./img/2.jpg" alt=""></div>
+    </section>
+    <img id="satin" src="./img/satin2.jpg" alt="">
+      
+    <section id="section2">
+
+      <h1 id="satinh1" class="po-ab">Satin mood</h1>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      
+      <p>여기엔 사틴무드에 대한 설명과 이것저것이 들어갑니다</p>
+    </section>
+    
+    <section id="section3" class="po-re">
+
+      <div class="po-ab"></div>
+      <div class="po-ab"></div>
+      <div class="po-ab"></div>
+
+    </section>
+
+
+
+    
+
+  </div>
+  
+
+
+
+  <script>
+    const outputEle = document.querySelector('.back');
+    console.log(outputEle);
+
+    //slider
+
+    const $slides = document.querySelectorAll('#slide');
+    console.log($slides);
+
+    let index = 0;
+    setInterval(() => {
+      if(index < $slides.length-1) {
+        $slides[index].style.marginLeft = '-100vw';
+        index += 1;
+      } else { 
+        index = 0;
+        for(let i = 0; i< $slides.length; i++) {
+        $slides[i].style.marginLeft = '0vw';
+        }
+      }
+    }, 2000);
+    //slider 
+  
+
+    const kurTxt = document.querySelector('#section1 h1');
+    const kurImg = document.querySelectorAll('#section1>div');
+    console.log(kurTxt);
+    console.log(kurImg);
+    const $satin = document.querySelector('#satin');
+    const $satinTitle = document.querySelector('#section2>h1')
+    console.log($satinTitle);
+    const $satinImg = document.querySelectorAll('#section2 div');
+    console.log($satinImg);
+
+    
+
+
+    
+    
+
+    window.addEventListener('scroll', (e) => {
+      e.preventDefault();
+      const posY = outputEle.getBoundingClientRect().bottom;
+      console.log(scrollY);
+      console.log(posY);
+
+      if (scrollY >= 300) {
+        kurTxt.style.opacity = "1";
+        kurImg[0].style.opacity = "1";
+        kurImg[1].style.opacity = "1";
+      } else {
+        kurTxt.style.opacity = "0"
+        kurImg[0].style.opacity = "0";
+        kurImg[1].style.opacity = "0";
+      }
+      // 섹션 1박스
+
+      if (scrollY >= 1000 && scrollY <= 1900) {
+      $satin.style.top = "1100px";
+      $satin.style.opacity = "1";
+      } else {
+        $satin.style.top = "1600px";
+        $satin.style.opacity = "0"; 
+      }
+
+      //섹션2 사틴무드 이미지
+
+      if ( scrollY >= 1800 && scrollY < 2300) {
+        $satinTitle.style.transform = "scale(1)";
+        $satinTitle.style.top = "5vh";
+        $satinTitle.style.position = "fixed";
+        
+      } else {
+        $satinTitle.style.transform = "scale(0)";
+        $satinTitle.style.top = "-30%";
+      }
+
+      // 섹션3 사틴무드 텍스트
+
+      if (scrollY >= 1900) {
+        for(let i = 0; i<$satinImg.length; i++) {
+          setInterval(() => {  
+            $satinImg[i].style.opacity = "1";
+          }, (500) * (i+1));
+        }
+        //사틴무드 이미지 3개
+      }
+
+      if (scrollY >= 1900) {
+
+      }
+    })
+
+
+    
+
+  </script>
+
+</body>
+</html>
