@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    *{padding: 0;margin: 0;box-sizing: border-box;}
+    .mar-0a{margin: 0 auto;}
+    .dis-bl{display: block;}
+    .dis-fl{display: flex;}
+    .just-cen{justify-content: center;}
+    .align-cen{align-items: center;}
+    .f-1{flex: 1;}
+    .f-2{flex: 2;}
+    .f-3{flex: 3;}
+    .f-4{flex: 4;}
+    .f-5{flex: 5;}
+    .po-ab{position: absolute;}
+    .po-re{position: relative;}
+    .noteBox{width: 30%; height: 25%; border-radius: 120px; background-color: rgb(219, 75, 94);}
+    .wid-100{width: 100vw;}
+    .hei-100{height: 100vh;}
+    .over-hid{overflow: hidden;}
+    .zindex-9{z-index: 9;}
+    p{line-height: 23px; letter-spacing: .5px;}
+
+    header{
+      height: 15vh;
+      background-color: #eee;
+    }
+    
+    strong{
+      font-size: 2em;
+    }
+
+    #logo{
+      height: 100%;
+      background-color: #000;
+      width: 15vw;
+      min-width: 200px;
+      display: flex;
+      align-items: center;
+    }
+
+    #logo img{
+      width: 100%;
+    }
+
+    #chan{
+      font-size: 3em;
+      color: rgb(255, 247, 240);
+      top: 26%;
+      right: 17%;
+      cursor: pointer;
+    }
+
+    h2{
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    #chan-txt{
+      top: 32%;
+      right: 7%;
+      color: white;
+      opacity: 0;
+      transition: 1000ms;
+    }
+
+    #mainImg{
+      width: 100vw;
+      height: 85vh;
+      background-color: #DB9E9E;
+    }
+
+
+    #mainImg img{
+      width: 100vw;
+    }
+
+    #sec2 #leftBox{
+      width: 50vw;
+      height: 100vh;
+      background-color: #B3A9E8;
+    }
+
+    #sec2 #leftBox img{
+      height: 100vh;
+    }
+
+    #sec2 #rightBox{
+      width: 50vw;
+      height: 100vh;
+      background-color: #eee
+    }
+
+    #sec2 #rightBox h2{
+      top: 25vh;
+      left: 10vw;
+      font-size: 4em;
+      color: darksalmon;
+    }
+
+    #sec2 #rightBox #frame{
+      width: 40%;
+      height: 50%;
+      background-color: burlywood;
+      box-shadow: 1px 1px 7px black;
+    }
+
+    #sec2 #rightBox #frame img{
+      width: 100%;
+      height: 100%;
+    }
+
+    #sec2 #rightBox p{
+      bottom: 10vh;
+      right: 11%;
+      font-size: 1.5em;
+    }
+
+    #sec2 #rightBox #line{
+      width: 1px;
+      height: 80%;
+      background-color: cadetblue;
+      right: 10%;
+    }
+
+    #sec3{
+      width: 100vw;
+      height: 100vh;
+      background-color: #222;
+    }
+
+    #sec3 #kili{
+      top: 34%;
+      left: 59%;
+      font-size: 2.6em;
+      color: white;
+      z-index: 1;
+      transition: 500ms;
+    }
+
+    #sec3 #kili:hover{
+      left: 52%;
+      font-size: 3.5em;
+    }
+
+    #sec3 #lela{
+      font-size: 3.5em;
+      z-index: 1;
+      color: white;
+      top: 5%;
+      left: 41%;
+      transition: 500ms;
+    }
+
+    #sec3 #lela:hover{
+      left: 35%;
+      font-size: 4em;
+    }
+
+    #sec3 #fmal{
+      font-size: 2.3em;
+      right: 15%;
+      bottom: 20%;
+      color: #ddd;
+      z-index: 1;
+      transition: 500ms;
+    }
+
+    #sec3 #fmal:hover{
+      bottom: 24%;
+      font-size: 3.5em;
+    }
+
+    #sec3 #marg{
+      font-size: 3em;
+      z-index: 1;
+      color: #fed;
+      bottom: 3%;
+      left: 8%;
+    }
+
+    #sec3 #marg:hover{
+      font-size: 3.6em;
+      bottom: 7%;
+      transition: 500ms;
+    }
+
+    #sec3 #topBox{
+      width: 40vw;
+      height: 20vh;
+      left: 5%;
+      top: 5%;
+    }
+
+    #sec3 #topBox img{
+      width: 100%;
+    }
+
+    #sec3 #topBox2{
+      width: 48vw;
+      height: 30vh;
+
+      right: 5%;
+      top: 5%;
+    }
+
+    #sec3 #topBox2 img{
+      width: 100%;
+    }
+
+    
+    #sec3 #subBox{
+      width: 30%;
+      height: 65%;
+      left: 5%;
+      bottom: 5%;
+      border: 1px solid black;
+    }
+
+    #sec3 #subBox img{
+      float: left;
+      height: 105%;
+    }
+
+    #sec3 #noteBox1{
+      left: 39%;
+      top: 38%;
+      display: flex;
+      justify-content: left;
+      align-items: baseline;
+    }
+
+    #sec3 #noteBox1 img{
+      height: 210%;
+      width: 100%;
+    }
+
+
+    #sec3 #noteBox2{
+      right: 3%;
+      bottom: 12%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #sec3 #noteBox2 img{
+      height: 100%;
+      width: 100%;
+    }
+
+    #sec4{
+      background-color: #222;
+    }
+
+    #sec4 #herm{
+      font-size: 3em;
+      color: rgb(221, 221, 221);
+      top: 5%;
+      left: 7%;
+      transition: 500ms;
+    }
+
+    #sec4 #herm:hover{
+      font-size: 3.5em;
+      left: 12%;
+    }
+
+    #sec4 img{
+      height: 100%;
+    }
+
+    #sec4 #irreg1{
+      width: 22%;
+      height: 60%;
+      background-color: #D1A0A0;
+      left: 15%;
+      bottom: 0;
+      /* box-shadow: 1px 1px 7px black; */
+    }
+
+    #sec4 #irreg2{
+      width: 18%;
+      height: 44%;
+      background-color: #AF6868;
+      top: 0;
+      left: 41%;
+      /* box-shadow: 1px 1px 7px black; */
+    }
+
+    #sec4 #irreg3{
+      height: 60%;
+      width: 20%;
+      background-color: #984D4D;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 3%;
+      /* box-shadow: 1px 1px 7px black; */
+    }
+
+    #sec5 #leftBox{
+      width: 50%;
+      left: 0;
+      background-color: #000;
+      text-align: center;
+    }
+
+    #sec5 #leftBox:hover img{
+      opacity: .5;
+      transition: 500ms;
+    }
+
+    #sec5 #rightBox:hover img{
+      opacity: .5;
+      transition: 500ms;
+    }
+
+    #sec5 #rightBox{
+      width: 50%;
+      right: 0;
+      background-color: #000;
+    }
+
+    #sec5 #midBox{
+      width: 20%;
+      height: 40%;
+
+    }
+
+    #sec5 img{
+      width: 100%;
+      height: 100%;
+    }
+
+    #fran{
+      font-size: 2.6em;
+      z-index: 1;
+      top: 28%;
+      left: 35%;
+      color: #ddd;
+    }
+
+    .hidden{
+      opacity: 0;
+    }
+
+    #sec6{
+      background-color: #222;
+    }
+
+    #sec6 #bigImg{
+      width: 63vw;
+      height: 100vh;
+      float: right;
+    }
+    #sec6 #bigImg img{
+      height: 100%;
+    }
+
+    #byre{
+      right: 5%;
+      top: 12%;
+      font-size: 3.2em;
+      text-shadow: 1px 1px 3px black;
+      transition: 500ms;
+    }
+
+    #byre:hover{
+      font-size: 3.7em;
+      right: 10%;
+    }
+
+
+  </style>
+</head>
+<body>
+  
+  <header class="dis-fl just-cen align-cen">
+    <div id="logo"><a href="#"><img src="img/logo.jpg" alt=""></a></div>
+  </header>
+
+  <section class="over-hid">
+    <h2 id="chan" class="po-ab">CHANEL</h2>
+    <p id="chan-txt" class="po-ab"><strong>CHANEL N°5</strong> <br><br> 플로럴-알데하이드 장르를 개척한 기념비 적인 향수. <br>
+      대중성보단 개성에 비중을 둔 향수로, 자신의 시그니쳐를 찾는다면 꼭 시향해 볼 만한 향수입니다.</p>
+    <div id="mainImg"><a href="#"><img src="img/shanum5.jpg" alt=""></a></div>
+
+    <div id="sec2" class="dis-fl">
+      <div id="leftBox" class="f-1 over-hid">
+        <img src="img/diptique.JPG" alt="">
+      </div>
+
+      <div id="rightBox" class="f-1 po-re dis-fl just-cen align-cen">
+
+        <h3 id="mOver" class="po-ab" style="top : 35%; right: 17%; transition: 700ms;"> please <br> mouseover</h3>
+        <div id="dip-txt" class="po-ab" style="top: 80%; left: -95%; opacity: 0; transition: 1000ms; background-color: rgb(0, 0, 0, 0.4); color: white; width: 640px;">diptyque는 인공적인 느낌에서 벗어나 자연의 야생적인 향을 추구하는 브랜드입니다. <br>
+          딥티크는 향수를 판매할 때 성별을 구분짓지 않는 게 특징인데요. <br>
+          그 만큼 중성적이며 개성있는, 자신만의 시그니쳐향을 찾을 확률도 높겠죠?</div>
+        <h2 id="dip" class="po-ab" style="cursor: pointer;">diptyque</h2>
+        
+        <div id="frame" class="over-hid"><a href="#"><img src="img/딥디크2.png" alt=""></a>
+          <div id="fleur" class="po-ab" style="background-color: rgb(0, 0, 0, 0); top: 85%; left: 2%; color: black; opacity: 0; transition: 500ms;"><strong>Fleur de Peau</strong>  <br><br>
+
+            Fleur de Peau는 피부의 꽃 이라는 이름을 갖고 있는 제품입니다.
+            <br> 아이리스와 머스크의 조합이 인상적이며, 무채색의 고급스러운 스타일링이 잘 어울리는 분들에게 추천드릴만 한 향수입니다. <br> 다만 화려하거나 발랄한 코디에는 어울리지 않을 수 있습니다.</div>
+        </div>
+        <div id="line" class="po-ab"></div>
+      </div>
+
+    </div>
+
+    <div id="sec3" class="po-re">
+
+      <!-- <div class="po-ab" style="width: 100vw; height: 1px; background-color: #aaa; top: 30%;"> </div> -->
+      <div class="po-ab" style="width: 100vw; height: 1px; background-color: #aaa; top: 40%;"> </div>
+      <div class="po-ab" style="width: 1px; height: 100vh; background-color: #aaa; left: 40%;"> </div>
+
+
+      <div id="moon" class="po-ab over-hid dis-fl" style="width: 40vw; height: 50vh; top: 24%; left: 27%; opacity: 0; transition: 300ms;"> <img src="img/moon.png" alt=""></div>
+      <div id="nero" class="po-ab over hid dis-fl" style="width: 30vw; height: 30vh; top: 33%; right: 0%; opacity: 0; transition: 300ms;"> <img src="img/neroli.png" alt=""></div>
+      <div id="kili" class="po-ab dis-bl"><h2>Kilian</h2></div>
+      <div id="kili-txt" class="po-ab" style="background-color: rgb(0, 0, 0, 0.4); top: 50%; left: 50%; z-index: 5; color: white; opacity: 0; transition: 1000ms;"><p>Kilian은 우아함과 화려함의 완벽한 균형을 추구하는 브랜드로, 독특한 개성과 우아한 기품을 다양하게 갖추고 있습니다. <br> 
+        대부분의 향수들에는 알코올에 섞인 슈가 그리고 코냑을 숙성시키는 나무통을 연상케 하는 향이 담겨져 있는 특징이 있습니다.</p></div>
+      <h2 id="lela" class="po-ab dis-bl">LE' LABO</h2>
+      <p id="lela-txt" class="po-ab" style=" background-color: rgb(0, 0, 0, 0.4); top: 20%; left: 30%; z-index: 5; color: white; opacity: 0; transition: 1000ms;">LE' LABO는 프랑스어로 '실험실'이라는 뜻인데요, <br>
+        이에서 예상할 수 있듯 조향사의 연구실에서 일어나는 다양한 일에서 영감을 얻어 향수를 만드는 브랜드입니다. <br> 
+        유니크하며 매니악한 향수 스펙트럼을 눈여겨 볼 수 있습니다.
+      </p>
+      <h2 id="fmal" class="po-ab dis-bl">FREDERIC MALLE</h2>
+      <p id="fmal-txt" class="po-ab" style="background-color: rgb(0, 0, 0, 0.4); bottom: 40%; width: 500px; left: 70%; z-index: 5; color: white; opacity: 0; transition: 1000ms;">FREDERIC MALLE은 브랜드 밸류로 장사를 한다기 보다는, 최고의 조향사들을 모아 그들의 이름을 걸고 하나하나의 작품을 만드는 브랜드입니다. <br>
+        최고라고 인정받는 퍼퓨머들이 각자 다른 계열의 향수를  만들어냈으니, 가히 향수계의 명예의 전당이라고 부를 수 있겠네요. <br> 단, 시향은 필수입니다.</p>
+      <h2 id="marg" class="po-ab dis-bl">Maison Margiela</h2>
+      <p id="marg-txt" class="po-ab" style="background-color: rgb(0, 0, 0, 0.4); bottom: 20%; left: 40%; z-index: 5; color: white; opacity: 0; transition: 1000ms; width: 600px;">Maison Margiela의 레플리카 컬렉션은, 순간 순간의 기억들을 담고있어, 기억속 이미지와, 인상, 감성을 떠올리게하는 Perfume과 Nostalgia의 의미를 모두 담고있는 브랜드입니다. <br>
+        그에 걸맞게 모든 향수의 이름이 특정 공간, 특정 순간으로 지어져 있으며, 개인적인 생각으로는 꽤 잘 맞는다고 생각이 들어요. <br>
+        호불호가 갈리는 향도 몇 가지 있으니, 블라인드 구매는 자제하는 편이 좋습니다. <br> 또한 캡이 없는 향수라는 특징을 가지고 있습니다.
+        </p>
+      <div id="topBox" class="po-ab over-hid">
+        <img src="img/어나더13.jpg" alt="">
+      </div>
+      <div id="topBox2" class="po-ab over-hid">
+        <img src="img/네롤리36.jpg" alt="">
+      </div>
+      <div id="subBox" class="po-ab over-hid">
+        <img src="img/파플.jpg" alt="">
+      </div>
+      <div id="noteBox1" class="noteBox po-ab over-hid">
+        <img src="img/블팬.jpg" alt="">
+      </div>
+      <div id="noteBox2" class="noteBox po-ab over-hid">
+        <img src="img/프말.jpg" alt="">
+      </div>
+    </div>
+
+    <div id="sec4" class="po-re wid-100 hei-100">
+      <div class="po-ab" style="width: 1px; height: 100vh; background-color: #ccc; left: 40%;"> </div>
+      <div class="po-ab" style="width: 100vw; height: 1px; background-color: #aaa; top: 42%;"> </div>
+
+
+        <h2 id="herm" class="po-ab">Hermès</h2>
+        <p id="herm-txt" class="po-ab" style="background-color: rgb(0, 0, 0, 0.4); top: 17%;left: 14%; z-index: 5; opacity: 0; transition: 1000ms; color: white; width: 400px;">Hermès는 향수 전문 브랜드가 아닌, 패션 브랜드로서 호불호 없는 무난한 향을 추구하는 편입니다. <br>
+          특이하게도 용도는 무난하지만, 향에서는 무난하지 않은 새로움이나 신비함을 주는 경향이 있습니다. </p>
+
+      
+      <div id="irreg1" class="po-ab over-hid dis-fl just-cen"><img src="img/h24.jpg" alt=""></div>
+      <div id="irreg2" class="po-ab over-hid dis-fl just-cen"><img src="img/운자르뎅.jpg" alt=""></div>
+      <div id="irreg3" class="po-ab over-hid dis-fl just-cen"><img src="img/떼르데르.jpg" alt=""></div>
+    </div>
+
+    <div id="sec6" class="po-re wid-100 hei-100">
+      <h2 id="byre" class="po-ab">BYREDO</h2>
+      <p id="byre-txt" class="po-ab" style="color: white; width: 25vw; left: 8%; top: 46%; transition: 500ms; opacity: 0; background-color: rgb(0, 0, 0, 0.4);">
+        BYREDO는 호불호가 크게 갈리지 않을만한 무난한 향이 강점으로, 블라인드로 구매해도 실패할 일이 거의 없다는 특징이 있습니다. <br>
+        또한 병 자체가 예쁘고, 캡이 자석으로 되어있어 열고 닫을 때 소소한 재미를 주는 브랜드입니다.
+      </p>
+
+      <div id="bigImg" class="over-hid">
+        <img src="img/바이레도.jph.jpg" alt="">
+      </div>
+    </div>
+
+    <div id="sec5" class="po-re dis-fl just-cen align-cen">
+
+      <h2 id="fran" class="po-ab">Maison Francis Kurkdjian</h2>
+      <p id="fran-txt" class="po-ab" style="background-color: rgb(0, 0, 0, 0.4); width: 600px; z-index: 5; color: white; top: 5%; right: 15%; transition: 1000ms; opacity: 0;">Maison Francis Kurkdjian은 세계적으로 유명한 조향사 프란시스 커정이 자신의 이름을 걸고 설립한 브랜드로 심플하면서도 섬세한 조향이 특징입니다. <br>
+        대부분의 향수들은 노트 구성이 복잡하지 않은 편인데, 최근의 니치 향수 브랜드들이 특정 노트의 자연적인 느낌을 강조하고 있는 것과 달리 향수 고유의 이미지를 담아내기 위한 섬세한 블렌딩을 느낄 수 있습니다. <br>
+        그 외의 특징으론 일반 퍼퓸에 비해 부향률이 더 높은 Extrait de parfum 제품이 주력 상품이라는 점이 있습니다.</p>
+
+      <div id="leftBox" class="hei-100"><a href="#"><img src="img/silk1.jpg" alt=""></a>
+        <div id="silk" class="po-ab" style="background-color: rgb(0, 0, 0, 0.4); top: 80%; left: 30%; opacity: 0; z-index: 9; color: white; transition: 500ms; display: inline; width: 600px;">Oud Silk mood Extrait de parfum은 장미 + 우드의 단순한 조합을 가지고있습니다. <br>
+          장미라고 하면 밝고 여성스러운 느낌이 난다고 생각하겠지만, 어딘가 모르게 서늘하고 차가우면서도 이지적으로 느껴지는 중성적인 장미의 생화 향기입니다.
+        </div>
+      </div>
+      <div id="rightBox" class="hei-100"><img src="img/satin2.jpg" alt="">
+        <div id="satin" class="po-ab" style="background-color: rgb(0, 0, 0, 0.4);z-index: 5; top: 80%; left: 66%; color: white; opacity: 0; transition: 500ms; display: inline; width: 500px;">
+          Oud Satin mood Extrait de parfum은 요구르트 + 우드의 조합으로 추운 날씨에 어울리는 향기입니다. <br>
+          엑스뜨레 드 퍼퓸 제품으로 요구르트답지 않은 고급스러운 느낌이 있으며, 지속력이 무척이나 강합니다. </div></div>
+      
+
+      <div id="midBox" class="po-ab"><img src="img/satin1.jpg" alt=""></div>
+
+      
+    </div>
+
+    
+  </section>
+
+  <footer>
+      
+  </footer>
+
+  <script>
+    const moon = document.getElementById('moon');
+    const nero = document.getElementById('nero');
+
+    const chan = document.querySelector('#chan');
+    const ctxt = document.querySelector('#chan-txt');
+
+    const dip = document.querySelector('#dip');
+    const dtxt = document.querySelector('#dip-txt');
+    const kili = document.querySelector('#kili');
+    const ktxt = document.querySelector('#kili-txt');
+    const lela = document.querySelector('#lela');
+    const ltxt = document.querySelector('#lela-txt');
+    const fmal = document.querySelector('#fmal');
+    const ftxt = document.querySelector('#fmal-txt');
+    const marg = document.querySelector('#marg');
+    const mtxt = document.querySelector('#marg-txt');
+    const byre = document.querySelector('#byre');
+    const btxt = document.querySelector('#byre-txt');
+
+    const herm = document.querySelector('#herm');
+    const htxt = document.querySelector('#herm-txt');
+
+    const fran = document.querySelector('#fran');
+    const frantxt = document.querySelector('#fran-txt');
+
+    const LeftBox = document.querySelector('#sec5>#midBox');
+    const silk = document.querySelector('#silk');
+    const RightBox = document.querySelector('#sec5>#rightBox');
+    const satin = document.querySelector('#satin');
+    const frame = document.getElementById('frame');
+    const fleur = document.getElementById('fleur');
+
+    LeftBox.addEventListener('mouseover', ()=>{
+      silk.style.opacity = "1";
+    })
+    LeftBox.addEventListener('mouseout', ()=>{
+      silk.style.opacity = "0";
+    })
+    RightBox.addEventListener('mouseover', ()=>{
+      satin.style.opacity = "1";
+    })
+    RightBox.addEventListener('mouseout', ()=>{
+      satin.style.opacity = "0";
+    })
+    frame.addEventListener('mouseover', ()=>{
+      fleur.style.opacity = "1";
+      document.querySelector('#mOver').style.opacity ="0";
+    })
+    frame.addEventListener('mouseout', ()=>{
+      fleur.style.opacity = "0";
+      document.querySelector('#mOver').style.opacity ="1";
+
+    })
+
+    chan.addEventListener('click', () =>{
+      ctxt.style.opacity = "1";
+    })
+
+    dip.addEventListener('click', () =>{
+      dtxt.style.opacity = "1";
+    })
+
+    byre.addEventListener('click', () =>{
+      btxt.style.opacity = "1";
+    })
+
+    herm.addEventListener('click', () =>{
+      htxt.style.opacity = "1";
+    })
+
+    fran.addEventListener('click', () =>{
+      frantxt.style.opacity = "1";
+    })
+
+    kili.addEventListener('click',()=>{
+      ktxt.style.opacity = "1";
+      ltxt.style.opacity = "0";
+      ftxt.style.opacity = "0";
+      mtxt.style.opacity = "0";
+      moon.style.opacity = "1";
+      nero.style.opacity = "0";
+    })
+
+    lela.addEventListener('click',()=>{
+      ktxt.style.opacity = "0";
+      ltxt.style.opacity = "1";
+      ftxt.style.opacity = "0";
+      mtxt.style.opacity = "0";
+      moon.style.opacity = "0";
+      nero.style.opacity = "1";
+    })
+
+    fmal.addEventListener('click',()=>{
+      ktxt.style.opacity = "0";
+      ltxt.style.opacity = "0";
+      ftxt.style.opacity = "1";
+      mtxt.style.opacity = "0";
+      moon.style.opacity = "0";
+      nero.style.opacity = "0";
+    })
+
+    marg.addEventListener('click',()=>{
+      ktxt.style.opacity = "0";
+      ltxt.style.opacity = "0";
+      ftxt.style.opacity = "0";
+      mtxt.style.opacity = "1";
+      moon.style.opacity = "0";
+      nero.style.opacity = "0";
+    })
+
+  </script>
+</body>
+</html>
