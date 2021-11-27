@@ -128,18 +128,19 @@
       width: 30vw;
       height: 40vh;
       background-color: chartreuse;
-      opacity: .7;
+      opacity: 0;
       top: 50vh;
-      left: 10vw;
+      left: -10vw;
+      transition: 500ms;
     }
-    #section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: 5vw; top: 20vh; opacity: .7;}
-    #section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: 20vw; opacity: .7;}
+    #section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; transition: 500ms;} 
+    #section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; transition: 500ms;}
 
   </style>
 </head>
 <body>
   
-  <div class="back" style="width: 100vw; height: 10000px; background: #eee">
+  <div class="back" style="width: 100vw; height: auto; background: #eee">
 
     
 
@@ -220,6 +221,9 @@
     const $satinImg = document.querySelectorAll('#section2 div');
     console.log($satinImg);
 
+    const $dipSection = document.querySelectorAll('#section3 div')
+    console.log($dipSection);
+
     
 
 
@@ -274,8 +278,20 @@
         //사틴무드 이미지 3개
       }
 
-      if (scrollY >= 1900) {
-
+      if (scrollY >= 3200 && scrollY < 4100) {
+        $dipSection[0].style.left = "10vw";
+        $dipSection[0].style.opacity = "0.7";
+        $dipSection[1].style.right = "5vw";
+        $dipSection[1].style.opacity = "0.7";
+        $dipSection[2].style.left = "20vw";
+        $dipSection[2].style.opacity = "0.7";
+      } else {
+        $dipSection[0].style.left = "-10vw";
+        $dipSection[0].style.opacity = "0";
+        $dipSection[1].style.right = "-5vw";
+        $dipSection[1].style.opacity = "0";
+        $dipSection[2].style.left = "-20vw";
+        $dipSection[2].style.opacity = "0";
       }
     })
 
