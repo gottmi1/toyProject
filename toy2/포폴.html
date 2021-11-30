@@ -11,6 +11,10 @@
       padding: 0; margin: 0; 
     }
 
+    body{
+      height: 12000px;
+    }
+
     .po-ab{position: absolute;}
     .po-re{position: relative;}
 
@@ -136,10 +140,63 @@
     #section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; transition: 500ms;} 
     #section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; transition: 500ms;}
 
+
+    #section4{
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      transition: 1000ms;
+      opacity: 0;
+      z-index: 5;
+    }
+
+    #section4>div{
+      width: 40vw;
+      height: 25vh;
+      opacity: 0;
+      transition: 300ms;
+    }
+
+    #section4>div:nth-child(1) {
+      background-color: chocolate;
+      top: 5vh;
+      left: 5vw;
+    }
+
+    #section4>div:nth-child(2) {
+      right: 5vw;
+      top: 35vh;
+      background-color: cornsilk;
+    }
+    #section4>div:nth-child(3) {
+      left: 8vw;
+      bottom: 15vh;
+      background-color: cornsilk;
+    }
+
+    #section5{
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background-color: blue;
+      opacity: 0;
+      top: 6800px;
+      transition: 500ms;
+    }
+
+    #topbtn{
+      position: fixed;
+      bottom: 2vh;
+      right: 2vw;
+      padding: 5px;
+      z-index: 55;
+    }
   </style>
 </head>
 <body>
   
+  <button id="topbtn" onclick="move(0,0)">위로</button>
+
   <div class="back" style="width: 100vw; height: auto; background: #eee">
 
     
@@ -179,15 +236,33 @@
     </section>
 
 
+    <section id="section4" class="po-re">
 
-    
+      <div class="po-ab"></div>
+      <div class="po-ab"></div>
+      <div class="po-ab"></div>
+
+    </section>
+
+    <section id="section5">
+
+    </section>
 
   </div>
+  
   
 
 
 
   <script>
+
+    function move(X, Y) {
+      scrollTo(X, Y);
+    }
+
+    const $topbtn =document.querySelector('#topbtn'); 
+    const $section = document.querySelectorAll('.back>section');
+    console.log($section)
     const outputEle = document.querySelector('.back');
     console.log(outputEle);
 
@@ -211,6 +286,7 @@
     //slider 
   
 
+    
     const kurTxt = document.querySelector('#section1 h1');
     const kurImg = document.querySelectorAll('#section1>div');
     console.log(kurTxt);
@@ -293,7 +369,45 @@
         $dipSection[2].style.left = "-20vw";
         $dipSection[2].style.opacity = "0";
       }
+
+      if (scrollY > 4100) {
+        $section[3].style.opacity = 1;
+      }
+
+      if (scrollY > 4200 && scrollY < 6800) {
+        $section[3].style.opacity = "1";
+        $section[3].style.position = "fixed";
+        $section[3].style.top = "0";
+      } else {
+        $section[3].style.opacity = "0";
+
+      }
+
+      if (scrollY > 5100) {
+        $section[3].children[0].style.opacity = "1";
+      } else {
+        $section[3].children[0].style.opacity = "0";
+      }
+      if (scrollY > 5800) {
+        $section[3].children[1].style.opacity = "1";
+      } else {
+        $section[3].children[1].style.opacity = "0";
+      }
+      if (scrollY > 6400) {
+        $section[3].children[2].style.opacity = "1";
+      } else {
+        $section[3].children[2].style.opacity = "0";
+      }
+
+      if (scrollY >= 6700) {
+        $section[4].style.opacity = "1";
+      }
+
+
+
     })
+
+
 
 
     
