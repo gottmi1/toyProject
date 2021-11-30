@@ -11,16 +11,13 @@
       padding: 0; margin: 0; 
     }
 
-    body{
-      height: 12000px;
-    }
+    /* body{
+      height: 20000px;
+    } */
 
     .po-ab{position: absolute;}
     .po-re{position: relative;}
 
-    .back{
-      overflow: hidden;
-    }
 
     #slide{width: 100vw;height: 100vh; float: left; transition: 200ms; opacity: 30%;}
     #slide:nth-child(1) {background-color: salmon; background: url(./img/satin1.jpg) no-repeat center center; background-size: cover;}
@@ -174,14 +171,13 @@
       background-color: cornsilk;
     }
 
-    #section5{
+    #blackbox{
       position: absolute;
       width: 100vw;
-      height: 100vh;
-      background-color: blue;
-      opacity: 0;
+      height: 150vh;
+      background-color: black;
+      opacity: 1;
       top: 6800px;
-      transition: 500ms;
     }
 
     #topbtn{
@@ -189,7 +185,38 @@
       bottom: 2vh;
       right: 2vw;
       padding: 5px;
-      z-index: 55;
+      z-index: 10;
+      border: none;
+    }
+
+    #hermes{
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 8200px;
+    }
+
+    #hermes>section{
+      transition: 500ms;
+      position: absolute;
+    }
+
+    #section5{
+      width: 100vw;
+      height: 100vh;
+      background-color: brown;
+    }
+
+    #section6{
+      width: 100vw;
+      height: 100vh;
+      background-color: cornflowerblue;
+    } 
+
+    #section7{
+      width: 100vw;
+      height: 100vh;
+      background-color: darkorange;
     }
   </style>
 </head>
@@ -197,7 +224,7 @@
   
   <button id="topbtn" onclick="move(0,0)">위로</button>
 
-  <div class="back" style="width: 100vw; height: auto; background: #eee">
+  <div class="back" style="width: 100vw; height: 20000px; background: #eee; overflow: hidden;">
 
     
 
@@ -232,6 +259,7 @@
       <div class="po-ab"></div>
       <div class="po-ab"></div>
       <div class="po-ab"></div>
+      <!-- 딥티크 -->
 
     </section>
 
@@ -242,12 +270,32 @@
       <div class="po-ab"></div>
       <div class="po-ab"></div>
 
+      <!-- 롬단 -->
     </section>
 
-    <section id="section5">
-
+    <section id="blackbox">
+      <!-- 그냥박스 -->
     </section>
 
+        <div id="hermes">
+          <section id="section5" class="po-ab">
+
+            <div><h1>에르메스</h1></div>
+
+          </section>
+
+          <section id="section6" class="po-ab">
+
+            <p>h24 사진 및 소개</p>
+
+          </section>
+
+          <section id="section7" class="po-ab">
+
+            <p>몰라</p>
+
+          </section>
+        </div>
   </div>
   
   
@@ -255,6 +303,10 @@
 
 
   <script>
+
+    const $herSec = document.querySelectorAll('#hermes>section');
+    console.log($herSec);
+    const $hermes = document.querySelector('#hermes');
 
     function move(X, Y) {
       scrollTo(X, Y);
@@ -301,13 +353,13 @@
     console.log($dipSection);
 
     
-
+    
 
     
     
 
     window.addEventListener('scroll', (e) => {
-      e.preventDefault();
+
       const posY = outputEle.getBoundingClientRect().bottom;
       console.log(scrollY);
       console.log(posY);
@@ -399,12 +451,30 @@
         $section[3].children[2].style.opacity = "0";
       }
 
-      if (scrollY >= 6700) {
-        $section[4].style.opacity = "1";
+      if (scrollY >= 8200 && scrollY <= 9500) {
+        $hermes.style.position = "fixed";
+        $hermes.style.top = "0";
+      } else {
+        $hermes.style.position = "";
+        $hermes.style.top = "8200px";
+
       }
 
+      if (scrollY >= 8500) {
+        $herSec[2].style.opacity = "0";
+      } else {
+        $herSec[2].style.opacity = "1";
+      }
+      if (scrollY >= 8700) {
+        $herSec[1].style.opacity = "0";
+      } else {
+        $herSec[1].style.opacity = "1";
+      }
 
-
+      if (scrollY >= 9500) {
+        $hermes.style.top = "9500px";
+        $hermes.style.position = "absolute";
+      }
     })
 
 
