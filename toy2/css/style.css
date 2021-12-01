@@ -1,0 +1,236 @@
+*{
+  padding: 0; margin: 0; 
+}
+
+/* body{
+  height: 20000px;
+} */
+
+.po-ab{position: absolute;}
+.po-re{position: relative;}
+
+
+#slide{width: 100vw;height: 100vh; float: left; transition: 200ms; opacity: 30%;}
+#slide:nth-child(1) {background-color: salmon; background: url(../img/satin1.jpg) no-repeat center center; background-size: cover;}
+#slide:nth-child(2) {background-color: silver; background: url(../img/h24.jpg) no-repeat center center; background-size: cover;}
+#slide:nth-child(3) {background-color: slateblue; background: url(../img/black-orchid.jpg) no-repeat center center; background-size: cover;}
+#slide:nth-child(4) {background-color: slateblue; background: url(../img/visuel-ombre-horizontal-rvb-72dpi.jpg) no-repeat center center; background-size: cover;}
+#slide:nth-child(5) {background-color: slateblue; background: url(../img/bldecha.jpg) no-repeat center center; background-size: cover;}
+
+#satin{
+  position: absolute;
+  top: 1600px;
+  transition: 1000ms;
+  opacity: 0;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+#top{
+  width: 500vw;
+  height: 100vh;
+  background-color: black;
+}
+
+#section1{
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  position: relative;
+}
+
+#section1 h1{
+  font-size: 4em;
+  color: rgb(228, 219, 168);
+  text-shadow: white 3px 3px 3px;
+  position: absolute;
+  left: 1%;
+  top: 0px;
+  z-index: 9;
+  opacity: 0;
+  transition: 400ms;
+}
+
+#section1 #kur1{
+  height: 90vh;
+  width: auto;
+  right: 10vw;
+  top: 50px;
+  opacity: 0;
+  transition: 2000ms;
+}
+
+#section1 #kur2{
+  height: 70vh;
+  width: auto;
+  left: 5vw;
+  top: 200px;
+  opacity: 0;
+  transition: 1000ms;
+}
+
+#section1 img {
+  width: 100%;
+  height: 100%;
+}
+
+#section2 {
+  width: 100vw;
+  height: 120vh;
+  background-color: #ccc;
+  position: relative;
+  padding-top: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#section2 h1{
+  font-size: 7em;
+  font-weight: 300;
+  top: -30%;
+  transform: scale(0);
+  transition: 600ms;
+  z-index: 2;
+}
+
+#section2 p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#section2 div{
+  width: 27%;
+  height: 60%;
+  background-color: blueviolet;
+  transition: 1000ms;
+  opacity: 0;
+}
+
+#section3 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  background: url(../img/diplogo.jpg) no-repeat center center; background-size: cover;
+}
+
+#section3 img{
+  width: 100%;
+  height: 100%;
+}
+
+#section3 div:nth-child(1) {
+  width: 40vw;
+  height: 30vh;
+  background-color: chartreuse;
+  opacity: 0;
+  top: 65vh;
+  left: -10vw;
+  transition: 500ms;
+}
+#section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; transition: 500ms;} 
+#section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; transition: 500ms;}
+
+
+#section4{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  transition: 300ms;
+  opacity: 0;
+  z-index: 5;
+  background: url(../img/lomdan.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+#section4>div{
+  width: 40vw;
+  height: 25vh;
+  opacity: 0;
+  transition: 300ms;
+}
+
+#section4>div:nth-child(1) {
+  background-color: chocolate;
+  top: 5vh;
+  left: 5vw;
+}
+
+#section4>div:nth-child(2) {
+  right: 5vw;
+  top: 35vh;
+  background-color: cornsilk;
+}
+#section4>div:nth-child(3) {
+  left: 8vw;
+  bottom: 15vh;
+  background-color: cornsilk;
+}
+
+#blackbox{
+  position: absolute;
+  width: 100vw;
+  height: 150vh;
+  background-color: black;
+  opacity: 1;
+  top: 6800px;
+}
+
+#topbtn{
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  padding: 5px;
+  z-index: 10;
+  border: none;
+}
+
+#hermes{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 8200px;
+}
+
+#hermes>section{
+  transition: 500ms;
+  position: absolute;
+}
+
+#section5{
+  width: 100vw;
+  height: 100vh;
+  background-color: brown;
+}
+
+#section6{
+  width: 100vw;
+  height: 100vh;
+  background-color: cornflowerblue;
+} 
+
+#section7{
+  width: 100vw;
+  height: 100vh;
+  background-color: darkorange;
+  background: url(../img/hermeslogo.png) center center no-repeat;
+  transition: 2000ms;
+}
+
+#section8{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 10430px;
+  background-color: aqua;
+}
+
+#section9{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 11360px;
+  background-color: burlywood;
+}

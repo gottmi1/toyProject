@@ -6,219 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <style> 
-    *{
-      padding: 0; margin: 0; 
-    }
-
-    /* body{
-      height: 20000px;
-    } */
-
-    .po-ab{position: absolute;}
-    .po-re{position: relative;}
-
-
-    #slide{width: 100vw;height: 100vh; float: left; transition: 200ms; opacity: 30%;}
-    #slide:nth-child(1) {background-color: salmon; background: url(./img/satin1.jpg) no-repeat center center; background-size: cover;}
-    #slide:nth-child(2) {background-color: silver; background: url(./img/h24.jpg) no-repeat center center; background-size: cover;}
-    #slide:nth-child(3) {background-color: slateblue; background: url(./img/black-orchid.jpg) no-repeat center center; background-size: cover;}
-    #slide:nth-child(4) {background-color: slateblue; background: url(./img/visuel-ombre-horizontal-rvb-72dpi.jpg) no-repeat center center; background-size: cover;}
-    #slide:nth-child(5) {background-color: slateblue; background: url(./img/bldecha.jpg) no-repeat center center; background-size: cover;}
-
-    #satin{
-      position: absolute;
-      top: 1600px;
-      transition: 1000ms;
-      opacity: 0;
-      background-attachment: fixed;
-      width: 100vw;
-      height: 100vh;
-      z-index: 10;
-    }
-
-    #top{
-      width: 500vw;
-      height: 100vh;
-      background-color: black;
-    }
-
-    #section1{
-      width: 100vw;
-      height: 100vh;
-      background: #111;
-      position: relative;
-    }
-
-    #section1 h1{
-      font-size: 4em;
-      color: rgb(228, 219, 168);
-      text-shadow: white 3px 3px 3px;
-      position: absolute;
-      left: 1%;
-      top: 0px;
-      z-index: 9;
-      opacity: 0;
-      transition: 400ms;
-    }
-
-    #section1 #kur1{
-      height: 90vh;
-      width: auto;
-      right: 10vw;
-      top: 50px;
-      opacity: 0;
-      transition: 2000ms;
-    }
-
-    #section1 #kur2{
-      height: 70vh;
-      width: auto;
-      left: 5vw;
-      top: 200px;
-      opacity: 0;
-      transition: 1000ms;
-    }
-
-    #section1 img {
-      width: 100%;
-      height: 100%;
-    }
-
-    #section2 {
-      width: 100vw;
-      height: 120vh;
-      background-color: #ccc;
-      position: relative;
-      padding-top: 20vh;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    #section2 h1{
-      font-size: 7em;
-      font-weight: 300;
-      top: -30%;
-      transform: scale(0);
-      transition: 600ms;
-      z-index: 2;
-    }
-
-    #section2 p{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    #section2 div{
-      width: 27%;
-      height: 60%;
-      background-color: blueviolet;
-      transition: 1000ms;
-      opacity: 0;
-    }
-
-    #section3 {
-      width: 100vw;
-      height: 100vh;
-      background-color: #fff;
-      background: url(./img/diplogo.jpg) no-repeat center center; background-size: cover;
-    }
-
-    #section3 div:nth-child(1) {
-      width: 30vw;
-      height: 40vh;
-      background-color: chartreuse;
-      opacity: 0;
-      top: 50vh;
-      left: -10vw;
-      transition: 500ms;
-    }
-    #section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; transition: 500ms;} 
-    #section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; transition: 500ms;}
-
-
-    #section4{
-      width: 100vw;
-      height: 100vh;
-      background-color: black;
-      transition: 1000ms;
-      opacity: 0;
-      z-index: 5;
-    }
-
-    #section4>div{
-      width: 40vw;
-      height: 25vh;
-      opacity: 0;
-      transition: 300ms;
-    }
-
-    #section4>div:nth-child(1) {
-      background-color: chocolate;
-      top: 5vh;
-      left: 5vw;
-    }
-
-    #section4>div:nth-child(2) {
-      right: 5vw;
-      top: 35vh;
-      background-color: cornsilk;
-    }
-    #section4>div:nth-child(3) {
-      left: 8vw;
-      bottom: 15vh;
-      background-color: cornsilk;
-    }
-
-    #blackbox{
-      position: absolute;
-      width: 100vw;
-      height: 150vh;
-      background-color: black;
-      opacity: 1;
-      top: 6800px;
-    }
-
-    #topbtn{
-      position: fixed;
-      bottom: 2vh;
-      right: 2vw;
-      padding: 5px;
-      z-index: 10;
-      border: none;
-    }
-
-    #hermes{
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      top: 8200px;
-    }
-
-    #hermes>section{
-      transition: 500ms;
-      position: absolute;
-    }
-
-    #section5{
-      width: 100vw;
-      height: 100vh;
-      background-color: brown;
-    }
-
-    #section6{
-      width: 100vw;
-      height: 100vh;
-      background-color: cornflowerblue;
-    } 
-
-    #section7{
-      width: 100vw;
-      height: 100vh;
-      background-color: darkorange;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   
@@ -247,18 +35,34 @@
 
       <h1 id="satinh1" class="po-ab">Satin mood</h1>
 
-      <div></div>
-      <div></div>
-      <div></div>
+      <div>
+        <span>
+          발향
+        </span>
+      </div>
+      <div>
+        <span>
+          지속
+        </span>
+      </div>
+      <div>
+        특징
+      </div>
       
       <p>여기엔 사틴무드에 대한 설명과 이것저것이 들어갑니다</p>
     </section>
     
     <section id="section3" class="po-re">
 
-      <div class="po-ab"></div>
-      <div class="po-ab"></div>
-      <div class="po-ab"></div>
+      <div class="po-ab">
+        <img src="img/dipImg1.jpg" alt="">
+      </div>
+      <div class="po-ab">
+        <img src="img/dipImg2-2.jpg" alt="">
+      </div>
+      <div class="po-ab">
+        <img src="img/diptique.JPG" alt="">
+      </div>
       <!-- 딥티크 -->
 
     </section>
@@ -266,9 +70,15 @@
 
     <section id="section4" class="po-re">
 
-      <div class="po-ab"></div>
-      <div class="po-ab"></div>
-      <div class="po-ab"></div>
+      <div class="po-ab">
+        <p>비뿌용?</p>
+      </div>
+      <div class="po-ab">
+        <p>장미향이 어디?</p>
+      </div>
+      <div class="po-ab">
+        <p>사실상 상위호환 MFK의 A La Rose </p>
+      </div>
 
       <!-- 롬단 -->
     </section>
@@ -292,197 +102,23 @@
 
           <section id="section7" class="po-ab">
 
-            <p>몰라</p>
-
           </section>
         </div>
+
+        <section id="section8">
+
+          톰포드
+
+        </section>
+
+        <section id="section9">
+
+          톰포드
+
+        </section>
+
   </div>
   
-  
-
-
-
-  <script>
-
-    const $herSec = document.querySelectorAll('#hermes>section');
-    console.log($herSec);
-    const $hermes = document.querySelector('#hermes');
-
-    function move(X, Y) {
-      scrollTo(X, Y);
-    }
-
-    const $topbtn =document.querySelector('#topbtn'); 
-    const $section = document.querySelectorAll('.back>section');
-    console.log($section)
-    const outputEle = document.querySelector('.back');
-    console.log(outputEle);
-
-    //slider
-
-    const $slides = document.querySelectorAll('#slide');
-    console.log($slides);
-
-    let index = 0;
-    setInterval(() => {
-      if(index < $slides.length-1) {
-        $slides[index].style.marginLeft = '-100vw';
-        index += 1;
-      } else { 
-        index = 0;
-        for(let i = 0; i< $slides.length; i++) {
-        $slides[i].style.marginLeft = '0vw';
-        }
-      }
-    }, 2000);
-    //slider 
-  
-
-    
-    const kurTxt = document.querySelector('#section1 h1');
-    const kurImg = document.querySelectorAll('#section1>div');
-    console.log(kurTxt);
-    console.log(kurImg);
-    const $satin = document.querySelector('#satin');
-    const $satinTitle = document.querySelector('#section2>h1')
-    console.log($satinTitle);
-    const $satinImg = document.querySelectorAll('#section2 div');
-    console.log($satinImg);
-
-    const $dipSection = document.querySelectorAll('#section3 div')
-    console.log($dipSection);
-
-    
-    
-
-    
-    
-
-    window.addEventListener('scroll', (e) => {
-
-      const posY = outputEle.getBoundingClientRect().bottom;
-      console.log(scrollY);
-      console.log(posY);
-
-      if (scrollY >= 300) {
-        kurTxt.style.opacity = "1";
-        kurImg[0].style.opacity = "1";
-        kurImg[1].style.opacity = "1";
-      } else {
-        kurTxt.style.opacity = "0"
-        kurImg[0].style.opacity = "0";
-        kurImg[1].style.opacity = "0";
-      }
-      // 섹션 1박스
-
-      if (scrollY >= 1000 && scrollY <= 1900) {
-      $satin.style.top = "1100px";
-      $satin.style.opacity = "1";
-      } else {
-        $satin.style.top = "1600px";
-        $satin.style.opacity = "0"; 
-      }
-
-      //섹션2 사틴무드 이미지
-
-      if ( scrollY >= 1800 && scrollY < 2300) {
-        $satinTitle.style.transform = "scale(1)";
-        $satinTitle.style.top = "5vh";
-        $satinTitle.style.position = "fixed";
-        
-      } else {
-        $satinTitle.style.transform = "scale(0)";
-        $satinTitle.style.top = "-30%";
-      }
-
-      // 섹션3 사틴무드 텍스트
-
-      if (scrollY >= 1900) {
-        for(let i = 0; i<$satinImg.length; i++) {
-          setInterval(() => {  
-            $satinImg[i].style.opacity = "1";
-          }, (500) * (i+1));
-        }
-        //사틴무드 이미지 3개
-      }
-
-      if (scrollY >= 3200 && scrollY < 4100) {
-        $dipSection[0].style.left = "10vw";
-        $dipSection[0].style.opacity = "0.7";
-        $dipSection[1].style.right = "5vw";
-        $dipSection[1].style.opacity = "0.7";
-        $dipSection[2].style.left = "20vw";
-        $dipSection[2].style.opacity = "0.7";
-      } else {
-        $dipSection[0].style.left = "-10vw";
-        $dipSection[0].style.opacity = "0";
-        $dipSection[1].style.right = "-5vw";
-        $dipSection[1].style.opacity = "0";
-        $dipSection[2].style.left = "-20vw";
-        $dipSection[2].style.opacity = "0";
-      }
-
-      if (scrollY > 4100) {
-        $section[3].style.opacity = 1;
-      }
-
-      if (scrollY > 4200 && scrollY < 6800) {
-        $section[3].style.opacity = "1";
-        $section[3].style.position = "fixed";
-        $section[3].style.top = "0";
-      } else {
-        $section[3].style.opacity = "0";
-
-      }
-
-      if (scrollY > 5100) {
-        $section[3].children[0].style.opacity = "1";
-      } else {
-        $section[3].children[0].style.opacity = "0";
-      }
-      if (scrollY > 5800) {
-        $section[3].children[1].style.opacity = "1";
-      } else {
-        $section[3].children[1].style.opacity = "0";
-      }
-      if (scrollY > 6400) {
-        $section[3].children[2].style.opacity = "1";
-      } else {
-        $section[3].children[2].style.opacity = "0";
-      }
-
-      if (scrollY >= 8200 && scrollY <= 9500) {
-        $hermes.style.position = "fixed";
-        $hermes.style.top = "0";
-      } else {
-        $hermes.style.position = "";
-        $hermes.style.top = "8200px";
-
-      }
-
-      if (scrollY >= 8500) {
-        $herSec[2].style.opacity = "0";
-      } else {
-        $herSec[2].style.opacity = "1";
-      }
-      if (scrollY >= 8700) {
-        $herSec[1].style.opacity = "0";
-      } else {
-        $herSec[1].style.opacity = "1";
-      }
-
-      if (scrollY >= 9500) {
-        $hermes.style.top = "9500px";
-        $hermes.style.position = "absolute";
-      }
-    })
-
-
-
-
-    
-
-  </script>
-
+  <script src="./js/script.js"></script>
 </body>
 </html>
