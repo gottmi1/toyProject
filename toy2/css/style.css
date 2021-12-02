@@ -20,7 +20,7 @@
 
 #satin{
   position: absolute;
-  top: 1600px;
+  top: 0px;
   transition: 1000ms;
   opacity: 0;
   background-attachment: fixed;
@@ -133,10 +133,12 @@
   opacity: 0;
   top: 65vh;
   left: -10vw;
-  transition: 200ms;
+  transition: 500ms;
 }
-#section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; transition: 200ms;} 
-#section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; transition: 200ms;}
+#section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; 
+  transition: 500ms;} 
+#section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; 
+  transition: 500ms;}
 
 
 #section4{
@@ -270,6 +272,7 @@
   position: absolute;
   top: 11260px;
   background-color: burlywood;
+  margin-top: 90px;
 }
 
 #section9 article{
@@ -277,13 +280,13 @@
   height: 100vh;
 }
 
-#section9 article:nth-child(1) {background: url(/img/톰포드.jpg) center center no-repeat; background-size: cover;}
+#section9 article:nth-child(1) {background: url(../img/톰포드.jpg) center center no-repeat; background-size: cover;}
 #section9 article:nth-child(2) {background-color: black;}
 
 
 
 #tomford-bot{
-  background: url(/img/느와.gif) center center no-repeat;
+  background: url(../img/느와.gif) center center no-repeat;
   background-size: contain;
 }
 
@@ -294,12 +297,12 @@
   transform: scale(0);
   top: -50vh;
 }
-#tomford-bot div:nth-child(1){ width: 40vw; height: 70vh; background: url(/img/비터피치.jpg) center center no-repeat;
+#tomford-bot div:nth-child(1){ width: 40vw; height: 70vh; background: url(../img/비터피치.jpg) center center no-repeat;
 background-size: cover; left: 5vw;
 }
-#tomford-bot div:nth-child(2){ width: 40vw; height: 35vh; background: url(/img/화스.jpg) center center no-repeat; 
+#tomford-bot div:nth-child(2){ width: 40vw; height: 35vh; background: url(../img/화스.jpg) center center no-repeat; 
 right: 10vw;}
-#tomford-bot div:nth-child(3){ width: 30vw; height: 50vh; background: url(/img/오드우드.jpg) no-repeat; background-size: contain;
+#tomford-bot div:nth-child(3){ width: 30vw; height: 50vh; background: url(../img/오드우드.jpg) no-repeat; background-size: contain;
 right: 15vw;
 }
 
@@ -308,6 +311,6 @@ right: 15vw;
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 13020px;
+  top: 13200px;
   background-color: #777;
 }

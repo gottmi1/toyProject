@@ -52,12 +52,7 @@
     const $dipSection = document.querySelectorAll('#section3 div')
     console.log($dipSection);
 
-    
-    
-
-    
-    
-
+  
     window.addEventListener('scroll', (e) => {
 
       const posY = outputEle.getBoundingClientRect().bottom;
@@ -75,12 +70,12 @@
       }
       // 섹션 1박스
 
-      if (scrollY >= 1000 && scrollY <= 1900) {
-      $satin.style.top = "1100px";
+      if (scrollY >= 1000 && scrollY <= 1800) {
+      $satin.style.top = "0px";
       $satin.style.opacity = "1";
+      $satin.style.position = "fixed";
       } else {
-        $satin.style.top = "1600px";
-        $satin.style.opacity = "0"; 
+      $satin.style.opacity = "0";
       }
 
       //섹션2 사틴무드 이미지
@@ -107,7 +102,7 @@
         //사틴무드 이미지 3개
       }
 
-      if (scrollY >= 2700 && scrollY < 4100) {
+      if (scrollY >= 2900 && scrollY < 4100) {
         $dipSection[0].style.left = "10vw";
         $dipSection[0].style.opacity = "0.7";
         $dipSection[1].style.right = "5vw";
@@ -125,6 +120,7 @@
 
       if (scrollY > 4100) {
         $section[3].style.opacity = 1;
+        $satin.style.position = "";
       }
 
       if (scrollY > 4200 && scrollY < 6800) {
@@ -150,6 +146,10 @@
         $section[3].children[2].style.opacity = "1";
       } else {
         $section[3].children[2].style.opacity = "0";
+      }
+
+      if (scrollY >= 8500) {
+        $section[3].style.display = "none";
       }
 
       if (scrollY >= 8200 && scrollY <= 9500) {
@@ -204,3 +204,5 @@
         } 
       }
     })
+
+    
