@@ -8,6 +8,7 @@
 
 .po-ab{position: absolute;}
 .po-re{position: relative;}
+.pa-5{padding: 5px;}
 
 
 #slide{width: 100vw;height: 100vh; float: left; transition: 200ms; opacity: 30%;}
@@ -85,7 +86,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+  opacity: 0;
+  transition: 500ms;
+  background: url(../img/mood.jpg) center center;
+  background-size: cover;
+  }
 #section2 h1{
   font-size: 7em;
   font-weight: 300;
@@ -105,7 +110,7 @@
   width: 27%;
   height: 60%;
   background-color: blueviolet;
-  transition: 1000ms;
+  transition: 500ms;
   opacity: 0;
 }
 
@@ -128,10 +133,10 @@
   opacity: 0;
   top: 65vh;
   left: -10vw;
-  transition: 500ms;
+  transition: 200ms;
 }
-#section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; transition: 500ms;} 
-#section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; transition: 500ms;}
+#section3 div:nth-child(2) {width: 20vw; height: 80vh; background-color: #555; right: -5vw; top: 20vh; opacity: 0; transition: 200ms;} 
+#section3 div:nth-child(3) {width: 40vw; height: 20vh; background-color: coral; top: 20vh; left: -20vw; opacity: 0; transition: 200ms;}
 
 
 #section4{
@@ -223,14 +228,86 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 10430px;
-  background-color: aqua;
+  top: 10380px;
+  background: url(../img/blchid.jpg) center center no-repeat;
+  background-size: cover;
 }
+
+#section8 #logo{
+  top: 20vh;
+  left: -50vw;
+  transform: scale(1);
+  transition: 600ms;
+}
+
+#section8 h1{
+  display: inline;
+  font-size: 8em;
+  color: rgb(255, 247, 204);
+  opacity: 0;
+  transition: 500ms;
+}
+
+#blackorchid{
+  text-align: center;
+  top: 30vh;
+  position: absolute;
+  left: 30vw;
+}
+
+#blackorchid h1:nth-child(4) {color: rgb(255, 242, 170);}
+#blackorchid h1:nth-child(5) {color: rgb(255, 239, 147); margin-right: 50px;}
+#blackorchid h1:nth-child(6) {color: rgb(255, 236, 126);}
+#blackorchid h1:nth-child(7) {color: rgb(255, 230, 89);}
+#blackorchid h1:nth-child(8) {color: rgb(255, 228, 77);}
+#blackorchid h1:nth-child(9) {color: rgb(255, 228, 77);}
+#blackorchid h1:nth-child(10) {color: rgb(255, 227, 70);}
+#blackorchid h1:nth-child(11) {color: rgb(255, 224, 46);}
 
 #section9{
   width: 100vw;
+  height: 200vh;
+  position: absolute;
+  top: 11260px;
+  background-color: burlywood;
+}
+
+#section9 article{
+  width: 100vw;
+  height: 100vh;
+}
+
+#section9 article:nth-child(1) {background: url(/img/톰포드.jpg) center center no-repeat; background-size: cover;}
+#section9 article:nth-child(2) {background-color: black;}
+
+
+
+#tomford-bot{
+  background: url(/img/느와.gif) center center no-repeat;
+  background-size: contain;
+}
+
+#tomford-bot div{
+  position: absolute;
+  transition: 500ms;
+  opacity: .7;
+  transform: scale(0);
+  top: -50vh;
+}
+#tomford-bot div:nth-child(1){ width: 40vw; height: 70vh; background: url(/img/비터피치.jpg) center center no-repeat;
+background-size: cover; left: 5vw;
+}
+#tomford-bot div:nth-child(2){ width: 40vw; height: 35vh; background: url(/img/화스.jpg) center center no-repeat; 
+right: 10vw;}
+#tomford-bot div:nth-child(3){ width: 30vw; height: 50vh; background: url(/img/오드우드.jpg) no-repeat; background-size: contain;
+right: 15vw;
+}
+
+
+#section10{
+  width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 11360px;
-  background-color: burlywood;
+  top: 13020px;
+  background-color: #777;
 }

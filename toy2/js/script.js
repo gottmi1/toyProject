@@ -1,4 +1,10 @@
-const $herSec = document.querySelectorAll('#hermes>section');
+    const $orchid = document.querySelectorAll('#blackorchid > h1');
+    console.log($orchid);
+    const $tomBot = document.querySelectorAll('#tomford-bot>div');
+    console.log($tomBot);
+
+
+    const $herSec = document.querySelectorAll('#hermes>section');
     console.log($herSec);
     const $hermes = document.querySelector('#hermes');
 
@@ -92,6 +98,7 @@ const $herSec = document.querySelectorAll('#hermes>section');
       // 섹션3 사틴무드 텍스트
 
       if (scrollY >= 1900) {
+        $section[1].style.opacity = "1";
         for(let i = 0; i<$satinImg.length; i++) {
           setInterval(() => {  
             $satinImg[i].style.opacity = "1";
@@ -100,7 +107,7 @@ const $herSec = document.querySelectorAll('#hermes>section');
         //사틴무드 이미지 3개
       }
 
-      if (scrollY >= 3150 && scrollY < 4100) {
+      if (scrollY >= 2700 && scrollY < 4100) {
         $dipSection[0].style.left = "10vw";
         $dipSection[0].style.opacity = "0.7";
         $dipSection[1].style.right = "5vw";
@@ -160,7 +167,7 @@ const $herSec = document.querySelectorAll('#hermes>section');
         $herSec[2].style.opacity = "1";
         $herSec[0].style.opacity = "0";
       }
-      if (scrollY >= 8700 && scrollY <= 9300) {
+      if (scrollY >= 8700 && scrollY <= 9200) {
         $herSec[1].style.opacity = "1";
       } else {
         $herSec[1].style.opacity = "0";
@@ -171,5 +178,29 @@ const $herSec = document.querySelectorAll('#hermes>section');
       if (scrollY >= 9500) {
         $hermes.style.top = "9500px";
         $hermes.style.position = "absolute";
+      }
+
+      if (scrollY >= 10300){
+        for(let i = 0; i<$orchid.length; i++) {
+        setInterval(() => {
+            $orchid[i].style.opacity = "1";
+        }, (80) * (1+i));
+      }
+      document.querySelector('#section8 > #logo').style.left = "15vw";
+      }
+
+
+      if ( scrollY >= 12100 && scrollY <= 12700) {
+        for ( let i = 0; i < $tomBot.length; i++) {
+          $tomBot[i].style.transform = "scale(1.0)";
+        } 
+        $tomBot[0].style.top = "10vh";
+        $tomBot[1].style.top = "5vh";
+        $tomBot[2].style.top = "45vh";
+      } else {
+        for ( let i = 0; i < $tomBot.length; i++) {
+          $tomBot[i].style.transform = "scale(0)";
+          $tomBot[i].style.top = "-50vh";
+        } 
       }
     })
