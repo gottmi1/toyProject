@@ -99,6 +99,7 @@
             $satinImg[i].style.opacity = "1";
           }, (500) * (i+1));
         }
+        $topbtn.style.opacity = "1";
         //사틴무드 이미지 3개
       }
 
@@ -167,8 +168,13 @@
         $herSec[2].style.opacity = "1";
         $herSec[0].style.opacity = "0";
       }
-      if (scrollY >= 8700 && scrollY <= 9200) {
+
+      if (scrollY >= 8700 && scrollY <= 9100) {
         $herSec[1].style.opacity = "1";
+      } else if(scrollY >= 8900 && scrollY <= 9400) {
+        $herSec[0].style.backgroundImage = "url(../img/hermesperfume.jpg)";
+        $herSec[0].children[0].style.opacity = "0";
+        $herSec[0].children[1].style.opacity = "1";
       } else {
         $herSec[1].style.opacity = "0";
       }
@@ -202,6 +208,12 @@
           $tomBot[i].style.transform = "scale(0)";
           $tomBot[i].style.top = "-50vh";
         } 
+      }
+
+      for(let i =0; i < $tomBot.length; i++) {
+        $tomBot[i].addEventListener('click', () => {
+          $tomBot[i].style.opacity = "0"
+        })
       }
     })
 

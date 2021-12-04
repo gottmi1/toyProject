@@ -16,7 +16,6 @@
 #slide:nth-child(2) {background-color: silver; background: url(../img/h24.jpg) no-repeat center center; background-size: cover;}
 #slide:nth-child(3) {background-color: slateblue; background: url(../img/black-orchid.jpg) no-repeat center center; background-size: cover;}
 #slide:nth-child(4) {background-color: slateblue; background: url(../img/visuel-ombre-horizontal-rvb-72dpi.jpg) no-repeat center center; background-size: cover;}
-#slide:nth-child(5) {background-color: slateblue; background: url(../img/bldecha.jpg) no-repeat center center; background-size: cover;}
 
 #satin{
   position: absolute;
@@ -91,27 +90,32 @@
   background: url(../img/mood.jpg) center center;
   background-size: cover;
   }
-#section2 h1{
+#section2>h1{
   font-size: 7em;
-  font-weight: 300;
+  font-weight: 500;
   top: -30%;
+  color: rgba(166, 167, 131, 0.815);
   transform: scale(0);
   transition: 600ms;
   z-index: 2;
+  text-shadow: 5px 0px 5px #fff;
 }
 
-#section2 p{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+#satinfrag {
+  width: 100%;
+  height: 40%;
+  background: url(../img/satin_frag.PNG)center center no-repeat;
+  background-size: contain;
 }
-#section2 div{
-  width: 27%;
+
+#section2>div{
+  width: 25%;
   height: 60%;
-  background-color: blueviolet;
+  background-color: rgba(39, 39, 39, 0.8);
+  color: white;
   transition: 500ms;
   opacity: 0;
+  padding: 20px;
 }
 
 #section3 {
@@ -157,10 +161,13 @@
   height: 25vh;
   opacity: 0;
   transition: 300ms;
+  overflow: hidden;
+  padding: 20px;
 }
 
 #section4>div:nth-child(1) {
-  background-color: chocolate;
+  background-color: rgba(105, 64, 64, 0.6);
+  color: white;
   top: 5vh;
   left: 5vw;
 }
@@ -168,12 +175,14 @@
 #section4>div:nth-child(2) {
   right: 5vw;
   top: 35vh;
-  background-color: cornsilk;
+  background-color: rgba(6, 63, 23, 0.808);
+  color: white;
 }
 #section4>div:nth-child(3) {
   left: 8vw;
   bottom: 15vh;
-  background-color: cornsilk;
+  background-color: rgba(9, 8, 12, 0.9);
+  color: white;
 }
 
 #blackbox{
@@ -192,6 +201,7 @@
   padding: 5px;
   z-index: 10;
   border: none;
+  transition: 400ms;
 }
 
 #hermes{
@@ -209,14 +219,58 @@
 #section5{
   width: 100vw;
   height: 100vh;
-  background-color: brown;
+  background: url(../img/408118.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#section5 h1{
+  font-size: 2em;
+}
+#section5 #h24top{
+  width: 30vw;
+  height: 25vh;
+  background-color: rgba(134, 121, 121, 0.3);
+  color: white;
+  padding: 40px;
+  position: relative;
+  top: 30vh;
+  left: 10vw;
+  transition: 300ms;
+  overflow: hidden;
+}
+
+#h24bot{
+  width: 40vw;
+  height: 25vh;
+  background-color: rgba(80, 71, 71, 0.788);
+  position: relative;
+  left: 10vw;
+  top: -20vh;
+  color: #fff;
+  opacity: 0;
+  transition: 300ms;
+  padding: 30px;
 }
 
 #section6{
   width: 100vw;
   height: 100vh;
-  background-color: cornflowerblue;
+  background: url(/img/h24img.jpg)no-repeat center center;
+  background-size: cover;
 } 
+
+#section6 div{
+  width: 30vw;
+  height: 10vh;
+  background-color: rgba(51, 34, 34, 0.5);
+  color: white;
+  padding: 20px;
+  position: relative;
+  top: 45vh;
+  left: 10vw;
+  transition: 300ms;
+  overflow: hidden;
+}
 
 #section7{
   width: 100vw;
@@ -230,7 +284,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 10380px;
+  top: 10430px;
   background: url(../img/blchid.jpg) center center no-repeat;
   background-size: cover;
 }
@@ -270,7 +324,7 @@
   width: 100vw;
   height: 200vh;
   position: absolute;
-  top: 11260px;
+  top: 11270px;
   background-color: burlywood;
   margin-top: 90px;
 }
@@ -311,6 +365,20 @@ right: 15vw;
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 13200px;
-  background-color: #777;
+  top: 13230px;
+  background: url(/img/orchid.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: .8;
+}
+
+#section10>div {
+  width: 40vw;
+  height: 30vh;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+}
+#section10 img{
+  width: 100%;
+  height: 100%;
 }
