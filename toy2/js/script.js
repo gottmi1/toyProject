@@ -172,7 +172,7 @@
       if (scrollY >= 8700 && scrollY <= 9100) {
         $herSec[1].style.opacity = "1";
       } else if(scrollY >= 8900 && scrollY <= 9400) {
-        $herSec[0].style.backgroundImage = "url(../img/hermesperfume.jpg)";
+        $herSec[0].style.backgroundImage = "url(./img/hermesperfume.jpg)";
         $herSec[0].children[0].style.opacity = "0";
         $herSec[0].children[1].style.opacity = "1";
       } else {
